@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Wordstudyweb.Models.ConceptData>
+
+@{
+    ViewBag.Title = "Topics";
+}
+
+<section class="ftco-section bg-light ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-md-9 ftco-animate">
+                <p class="breadcrumbs"><span class="mr-2"><a href="~/Home/Index">Home</a></span><span>Topics</span></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container4">
+
+  
+
+    <div class="row container ">
+        @foreach (Wordstudyweb.Models.ConceptData item in Model)
+        {
+        <div class="item card col-md-5 ftco-animate" style="margin:12px">
+
+
+
+            <p class="btn-custom card-header text-primary-wweb" style="color:#79632f">
+                @Html.ActionLink(item.concept.concept, "Conceptdetails", new { id = item.concept.Id }, new { @class = "text-primary-wweb", @style = "font-family:'Bell MT'; font-size:22px;" })
+
+
+
+            </p>
+
+            <ul style="list-style:none;">
+
+                <li class="small text-primary-wweb text-2">
+
+                        <div class="card border-left-0 border-right-0 border-bottom-0">
+                            <div class="col-md-12">
+                                <p class="card-body text-lg-right text-primary-wweb" style="font-family:'Bookman Old Style'; font-size:16px;">
+                                    @Html.DisplayFor(modelItem => item.topic.Title)
+                                </p>
+                                <img class="card-img-bottom card border-0" src="@item.topic.Url" />
+
+                                <p>
+                                    @Html.DisplayFor(modelItem => item.topic.Description)
+                                </p>
+                                <p>
+                                    @Html.ActionLink("Read more", "Details", new { id = item.topic.Id }, new { @class = "btn btn-outline-dark btn-default" })
+
+                                    @*<a class="btn btn-outline-dark btn-default" href="#">Read more &raquo;</a>*@
+                                </p>
+                            </div>
+                        </div>
+
+                </li>
+
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+                @*@foreach (var i in topics)
+        {
+            if (i.ConceptId == item.Id)
+            {
+
+                <li class="small text-2"><a class="linkers" href="#">@Html.DisplayFor(topic => i.Title)</a></li>
+            }
+        }*@
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </ul>
+
+        </div>}
+
+         </div>
+</div>

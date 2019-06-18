@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Wordstudyweb.Models.Insight>
+
+@{
+    ViewBag.Title = "Insights";
+}
+
+<section class="ftco-section bg-light ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-md-9 ftco-animate">
+                <p class="breadcrumbs"><span class="mr-2"><a href="~/Home/Index">Home</a></span><span>Insights</span></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row align-content-center align-self-xl-center  container4  ">
+
+    <div class="ftco-animate card container5 col-md-8" style="background-color:transparent;">
+        <div class="card-footer row" style="background-color:transparent">
+            <h6 class="text-justify text-primary-wweb"> olomolaiye shalom</h6>
+            <span class="d-flex align-items-start  jusitfy-content-center"><a href="#" class="text-decoration-none text-primary-wweb"><i class="icon-person_pin"></i></a></span>
+        </div>
+        <div class="card-body">
+            <span class=" small text-primary-wweb" >    ijopwjepojepjpwefd;lmwe;lmw;lem;lms;lml;mc;lsm;clmsl;dmc;lsm;lcmdlmcoemwfoemnocmoemcpsmnciomndiocrocveioprvormnvoprpepfioepnf</span>
+            <img class="card container" style="margin-bottom:2px; padding:0; background-color:transparent" src="~/Images/Carousels/background2.jpg">
+        </div>
+
+        <div class="card-header row" style="background-color:transparent;">
+            <span class="d-flex align-items-start  jusitfy-content-center"><a href="#" class="text-decoration-none text-primary-wweb">
+    <i class="icon-more"></i>
+    <label class="text-sm-center" style="font-size:10px;">121</label>
+</a></span>
+            <span style="margin-left:auto; font-size:10px; color:dimgrey; align-items:flex-end; "> date-time</span>
+        </div>
+    </div>
+ 
+</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.insight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.insight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RowVersion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

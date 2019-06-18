@@ -2,43 +2,167 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>@ViewBag.Title Word Study Unit</title>
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/Content/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+
+    <link rel="stylesheet" href="~/Content/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Content/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/Content/aos.css">
+
+    <link rel="stylesheet" href="~/fonts/ionicons/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/Content/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/Content/jquery.timepicker.css">
+
+    <script defer src="~/fontawesome/fontawesome-free-5.6.3-web/js/all.js"></script>
+    <link rel="stylesheet" href="~/fontawesome/fontawesome-free-5.6.3-web/css/all.css" />
+
+    <link rel="stylesheet" href="~/Content/flaticon.css">
+    <link rel="stylesheet" href="~/Content/icomoon.css">
+    <link rel="stylesheet" href="~/Content/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="align-items-start">
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+        </div>*@
+    <a href="#" class="js-colorlib-nav-toggle  colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+        <h1 id="colorlib-logo">
+            <a href="~/Home/Index">
+                <span> <i class="fas fa-book-open"></i></span>
+                Word Study Unit
+            </a>
+
+        </h1>
+
+        <nav id="colorlib-main-menu" role="navigation">
+            <ul>
+                <li>
+                    @Html.Partial("_LoginPartial")
+                </li>
+                <li><a href="~/Insight/Index">Insights</a></li>
+                <li><a href="~/Topics/Index">Topics</a></li>
+                <li><a href="~/Home/About">Outlines</a></li>
+                <li><a href="~/Home/Index">Bible</a></li>
+                <li><a href="~/Home/About">About</a></li>
+
+
+
+            </ul>
+        </nav>
+
+        <div class="colorlib-footer">
+            <div class="d-flex justify-content-center">
+                <ul class="d-flex align-items-center">
+                    <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-radio"></i></a></li>
+                    <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-mail_outline"></i></a></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        @RenderSection("SPAViews", required: false)
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    @*<div class="container body-content">
+            @RenderBody()
+            @RenderSection("SPAViews", required: false)
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+    <div id="colorlib-main">
+        <section class="ftco-section-2">
+            <div class="container">
+                @RenderBody()
+                @RenderSection("SPAViews", required: false)
+
+            </div>
+        </section>
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container px-md-5">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-4">
+                            <h2 class="ftco-heading-2">Our Mission</h2>
+                            <ul class="list-unstyled categories">
+                                <li><p>To ensure that all of Covenant university comes to the knowledge of HE that sent us</p> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Our Vision</h2>
+                            <ul class="list-unstyled categories">
+                                <li><P>To See all of Covenant university live a Godly life through the word of God.</P></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Contacts</h2>
+                            <div class="block-23 mb-3">
+                                <ul>
+                                    <li><span class="icon icon-map-marker"></span><span class="text">Word Study Unit office, Covenant University, Cannan Land OTA.</span></li>
+                                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">wordstudycu@gmail.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>&copy; @DateTime.Now.Year - Powered By <a href="http://inotech.com.ng/">INOTECH-NG</a></p>
+
+                    </div>
+                </div>
+            </div>
         </footer>
-    </div>
+    </div><!-- END COLORLIB-MAIN -->
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.easing.1.3.js"></script>
+    <script src="~/Scripts/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/jquery.stellar.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/aos.js"></script>
+    <script src="~/Scripts/jquery.animateNumber.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/jquery.timepicker.min.js"></script>
+    <script src="~/Scripts/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/Scripts/google-map.js"></script>
+    <script src="~/Scripts/main.js"></script>
 </body>
 </html>

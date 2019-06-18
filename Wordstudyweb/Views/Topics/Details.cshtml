@@ -1,0 +1,33 @@
+﻿@model Wordstudyweb.Models.Topic
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<section class="ftco-section bg-light ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-md-9 ftco-animate">
+                <p class="breadcrumbs"><span class="mr-2"><a href="~/Home/Index">Home</a></span><span class="mr-2"><a href="~/Topics/Index">Topics</a></span><span>@ViewBag.Title</span></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div>
+    <hr />
+
+    <div class="container row transparent" >
+        <div class=" col-sm-8 card border-0 img-fluid ">
+            <img src="@Model.Url" class="img img-fluid card-img" />
+        </div>
+        <div class="col-md-4 card-body card border-0">
+            <span class="initialism text-2 card card-body "  style="justify-content:center; font-family:'Bodoni MT'; text-decoration-color:dimgrey; background-color:transparent" >"@ViewData["Text"]"</span>
+        </div>
+    </div>
+    <span class="container card border-0 card-body transparent card-text text-2 text-primary-wweb transparent " style=" background-color:transparent;  text-align:justify; justify-content:flex-start;">
+        @Html.DisplayFor(model => model.Message)
+    </span>
+    <span class="justify-content-end container">
+        @ViewData["Date"]
+    </span>

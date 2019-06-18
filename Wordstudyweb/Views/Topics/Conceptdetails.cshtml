@@ -1,0 +1,51 @@
+﻿@model Wordstudyweb.Models.Concept
+@using Wordstudyweb.Models
+@{
+    ViewBag.Title = Model.concept;
+}
+@{IEnumerable<Topic> topics = (IEnumerable<Topic>)ViewData["Topics"];}
+
+<section class="ftco-section bg-light ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-md-9 ftco-animate">
+                <p class="breadcrumbs"><span class="mr-2"><a href="~/Home/Index">Home</a></span><span class="mr-2"><a href="~/Topics/Index">Topics</a></span><span>@ViewBag.Title</span></p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+    <hr />
+
+</div>
+
+<ul style="list-style:none;" class="pagination container6 row">
+    @foreach (Topic item in topics)
+    {
+
+        <li class="small text-primary-wweb text-2 card  border-right-0 border-bottom-0 col-md-4" style="margin:0px; background-color:transparent;">
+
+            <div class="">
+                <div class="col-md-12">
+                    <p class="card-body text-lg-right  text-primary-wweb" style="font-family:'Bookman Old Style'; font-size:20px;">
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </p>
+                    <img class="card-img-bottom card border-0" src="@item.Url" />
+
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </p>
+                    <p>
+                        @Html.ActionLink("Read more", "Details", new { id = item.Id }, new { @class = "btn btn-outline-dark btn-default" })
+                    </p>
+                </div>
+            </div>
+
+        </li>
+
+   
+    }
+</ul>
+
